@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Will You Be My Valentine?</title>
+<style>
+  /* This is where you write your CSS code */
+  body {
+    background-color: pink; /* You can change the background color here */
+  }
+
+  h1 {
+    text-align: center; /* This centers the text */
+    font-family: Times Roman; /* You can change the font here */
+    font-size: 36px; /* You can change the font size here */
+  }
+
+  button {
+    width: 200px; /* You can change the button width here */
+    height: 100px; /* You can change the button height here */
+    font-size: 40px; /* You can change the button font size here */
+  }
+
+  #yes-button {
+    position: absolute; /* This positions the button relative to the page */
+    left: 35%; /* Adjusted the left position */
+    top: 70%; /* This centers the button vertically */
+    transform: translate(-50%, -50%); /* This adjusts the button position */
+  }
+
+  #no-button {
+    position: absolute; /* This positions the button relative to the page */
+    left: 65%; /* Adjusted the left position */
+    top: 70%; /* This centers the button vertically */
+    transform: translate(-50%, -50%); /* This adjusts the button position */
+  }
+
+  #my-gif {
+    position: absolute; /* This positions the GIF relative to the page */
+    top:20%;
+    left:40%;
+  }
+
+  #yes-button:hover {
+    background-color: black; /* This changes the background color to black */
+    color: white; /* This changes the text color to white */
+  }
+
+  #no-button:hover {
+    background-color: red; /* This changes the background color to red */
+    color: white; /* This changes the text color to white */
+  }
+</style>
+</head>
+<body>
+<h1>Will you be my valentine?</h1>
+<button id="yes-button">Yes</button>
+<button id="no-button">No</button>
+<img src="https://media.tenor.com/images/3e1ff44c90e52ff1defe6b5dbaf225ca/tenor.gif" alt="HABIBTI" id="my-gif">
+<script>
+  // This is where you write your JavaScript code
+
+  // Get the yes and no buttons from the HTML document
+  var yesButton = document.getElementById("yes-button");
+  var noButton = document.getElementById("no-button");
+
+  // Add an event listener to the yes button that removes all elements when clicked
+  yesButton.addEventListener("click", function() {
+    yesButton.textContent = "I love you too"; // Set the text of the "Yes" button
+    noButton.textContent = ""; // Clear the text of the "No" button
+  });
+
+  // Define an array with different texts for the "No" button
+    var noTexts = ["Heart Broken", "Love Me", "I Love You", "Please Say Yes"];
+
+  // Add an event listener to the "No" button
+  noButton.addEventListener("click", function() {
+    // Generate a random index to pick a text from the array
+    var index = Math.floor(Math.random() * noTexts.length);
+    // Set the text of the "No" button
+    noButton.textContent = noTexts[index];
+  });
+
+</script>
+</body>
+</html>
+
+
+
+
